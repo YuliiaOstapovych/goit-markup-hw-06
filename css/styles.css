@@ -6,9 +6,8 @@
   --cloud: #f4f4fd;
   --ocean: #404bbf;
   --cornflower: #e7e9fc;
-  --lightslate: #8E8F99;
-  --navyblue-modal: rgba(46, 47, 66, 0.40);
-
+  --lightslate: #8e8f99;
+  --navyblue-modal: rgba(46, 47, 66, 0.4);
 }
 
 p,
@@ -36,8 +35,8 @@ img {
 .container {
   width: 100%;
   max-width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
   margin: 0 auto;
 }
 
@@ -66,7 +65,8 @@ img {
 
 .header {
   border-bottom: 1px solid var(--cornflower);
-  box-shadow:  0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-container {
   display: flex;
@@ -102,7 +102,7 @@ img {
 }
 
 .current::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   width: 100%;
@@ -116,7 +116,7 @@ img {
   letter-spacing: 0.02em;
   font-weight: 500;
   padding: 24px 0;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);  
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-list-link:hover,
 .header-list-link:focus {
@@ -169,8 +169,11 @@ img {
   background: var(--navyblue);
   padding-top: 188px;
   padding-bottom: 188px;
-  background-image: linear-gradient(rgba(46, 47, 66, 0.7), 
-rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/peopleoffice.jpg);
   max-width: 1440px;
   background-repeat: no-repeat;
   background-position: center;
@@ -216,15 +219,19 @@ rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
 /**---------principles-------*/
 
 .principles {
-  padding: 120px 0px;
+  /*padding: 120px 0px;*/
+  padding: 96px 0;
 }
 .principles-list {
   display: flex;
-  gap: 24px;
+  /*gap: 24px;*/
+  flex-wrap: wrap;
+  gap: 72px;
 }
 
 .principles-item {
-  width: calc((100% - 24px * 3) / 4);
+  width: 100%;
+  /*width: calc((100% - 24px * 3) / 4);*/
 }
 .principles-block {
   width: 264px;
@@ -235,24 +242,36 @@ rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
   align-items: center;
   justify-content: center;
   margin-bottom: 8px;
+  display: none;
 }
 .principles-icon {
   width: 64px;
   height: 64px;
-
+  display: none;
 }
 .principles-subtitle {
   color: var(--navyblue);
-  font-size: 20px;
+  /* font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  font-weight: 500;
+  font-weight: 500; */
+  text-align: center;
   margin-bottom: 8px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
 }
 .principles-item-text {
   color: var(--slate);
+  /* line-height: 1.5;
+  letter-spacing: 0.02em; */
+  align-self: stretch;
+  font-size: 16px;
+  font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.013em;
 }
 
 /**---------technologies-------*/
@@ -336,7 +355,8 @@ rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
   background-color: var(--white);
   width: calc((100% - 24px * 3) / 4);
   border-radius: 0px 0px 4px 4px;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .team-item-text {
   color: var(--slate);
@@ -382,19 +402,22 @@ rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
   justify-content: center;
   border-radius: 4px;
   border: 1px solid var(--lightslate);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--lightslate);
 }
-.costomers-block:hover, :focus {
+.costomers-block:hover,
+:focus {
   color: var(--ocean);
 }
-.costomers-block:hover, :focus {
+.costomers-block:hover,
+:focus {
   border-color: var(--ocean);
 }
 .costomers-icon {
-  fill: currentColor; 
+  fill: currentColor;
 }
-/**---------footer-------*/ 
+/**---------footer-------*/
 
 .footer {
   background-color: var(--navyblue);
@@ -404,10 +427,10 @@ rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
   display: flex;
   align-items: baseline;
 }
-.logo-container{
-  margin-right: 120px 
+.logo-container {
+  margin-right: 120px;
 }
-.footer-logo { 
+.footer-logo {
   color: var(--iris-color);
   font-size: 18px;
   font-family: "Raleway", sans-serif;
@@ -458,9 +481,8 @@ rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-socials-link:is(:hover, :focus) {
-  background-color: #31D0AA;
-} 
-
+  background-color: #31d0aa;
+}
 
 .footer-form-title {
   color: var(--white);
@@ -471,7 +493,6 @@ rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
   letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
-
 
 .footer-subscribe {
   margin-left: 80px;
@@ -493,17 +514,17 @@ rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
   color: var(--white);
   font-size: 12px;
   font-weight: 400;
-  line-height: 1.5; 
+  line-height: 1.5;
   letter-spacing: 0.04em;
   background-color: transparent;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
 .footer-email::placeholder {
-  color: var(--white); 
+  color: var(--white);
   font-size: 12px;
   font-weight: 400;
-  line-height: 2; 
+  line-height: 2;
   letter-spacing: 0.02em;
 }
 
@@ -524,15 +545,14 @@ rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
   cursor: pointer;
   border: none;
   outline: transparent;
-  padding: 8px 24px;  
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  padding: 8px 24px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-form-button:hover,
 .footer-form-button:focus {
   background-color: var(--ocean);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
-
 
 .footer-input-icon {
   margin-left: 16px;
@@ -564,14 +584,18 @@ rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
   padding: 12px 24px;
   border: 1px solid var(--cornflower);
   border-radius: 4px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .product-btn:hover,
 .product-btn:focus {
   color: var(--white);
   background-color: var(--ocean);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
   border-color: none;
 }
 .programs-list {
@@ -586,11 +610,13 @@ rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .programs-item:hover {
-  box-shadow: px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
- }
+  box-shadow: px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 .programs-item:focus {
-  box-shadow: px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
- }
+  box-shadow: px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 .programs-container {
   padding: 32px 16px;
   border: 1px solid var(--cornflower);
@@ -605,10 +631,12 @@ rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .pfograms-item-link:hover {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .pfograms-item-link:focus {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .cover-text {
   position: absolute;
@@ -651,28 +679,30 @@ rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
   cursor: pointer;
 }
 
-
 /**---------modal-------*/
 
 .backdrop {
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
   width: 408px;
   min-height: 584px;
-  background-color: #FCFCFC;
+  background-color: #fcfcfc;
   border-radius: 4px;
   position: absolute;
   left: 50%;
   top: 50%;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   transform: translate(-50%, -50%) scaleX(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 72px 24px 24px;
 }
 .backdrop.is-hidden .modal {
@@ -693,20 +723,21 @@ rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
   width: 24px;
   height: 24px;
   position: absolute;
-  padding: 0; 
+  padding: 0;
   top: 24px;
   right: 24px;
   cursor: pointer;
   border-radius: 50%;
-  border: 1px solid  rgba(0, 0, 0, 0.10);
-  background-color: #E7E9FC;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #e7e9fc;
   fill: var(--navyblue);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover {
   background-color: var(--ocean);
-  border: none; 
+  border: none;
 }
 .modal-close-btn:focus {
   background-color: var(--ocean);
@@ -726,12 +757,12 @@ rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
 .modal-title {
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.5; 
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--navyblue);
   text-align: center;
   margin-bottom: 16px;
-} 
+}
 .modal-input {
   border-radius: 4px;
   border: 1px solid var(--navyblue-modal);
@@ -744,7 +775,7 @@ rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
   line-height: 1.17;
   letter-spacing: 0.04em;
   outline: transparent;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding-left: 38px;
 }
 
@@ -768,7 +799,7 @@ rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
   color: var(--lightslate);
   font-size: 12px;
   font-weight: 400;
-  line-height: 1.17; 
+  line-height: 1.17;
   letter-spacing: 0.04em;
   margin-bottom: 4px;
 }
@@ -796,7 +827,8 @@ rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
   line-height: 1.17;
   letter-spacing: 0.04em;
   outline: transparent;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 8px 16px;
   resize: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -807,7 +839,7 @@ rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
 }
 
 .modal-textarea::placeholder {
-  color: rgba(46, 47, 66, 0.40);
+  color: rgba(46, 47, 66, 0.4);
   font-size: 12px;
   font-weight: 400;
   line-height: 1.2;
@@ -825,7 +857,7 @@ rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
 .modal-form-button {
   border-radius: 4px;
   background: var(--iris-color);
-  color: var(--white, #FFF);
+  color: var(--white, #fff);
   text-align: center;
   font-size: 16px;
   font-weight: 500;
@@ -866,11 +898,11 @@ rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
 }
 
 .form-check-text-icon {
-   display: inline-flex;
-   align-items: center;
-   justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
-.modal-check  {
+.modal-check {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -882,19 +914,87 @@ rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
   border: 1px solid var(--navyblue-modal);
   margin-right: 8px;
   fill: transparent;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-} 
+}
 
-.modal-check:checked +.form-check-text > .form-check-span {
+.modal-check:checked + .form-check-text > .form-check-span {
   background-color: var(--ocean);
   border: none;
   fill: var(--cloud);
 }
 
+@media screen and (min-width: 428px) {
+  .container {
+    max-width: 428px;
+  }
+}
 
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
 
+  .principles-list {
+    row-gap: 72px;
+    column-gap: 24px;
+} 
+  
+  .principles-item {
+    width: calc((100% - 24px) / 2);
+  }
+  .principles-subtitle {
+    text-align: left;
+  }
+}
 
-
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
+  .principles {
+    padding: 120px 0;
+  }
+  .principles-list {
+    gap: 24px;
+  }
+  .principles-item {
+    width: calc((100% - 24px * 3) / 4);
+  }
+  .principles-subtitle {
+    text-align: left;
+    color: var(--navyblue);
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.017em;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .principles-item-text {
+    color: var(--slate);
+    line-height: 1.5;
+    letter-spacing: 0.013em;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  .principles-block {
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+    background-color: var(--cloud);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+  .principles-icon {
+    width: 64px;
+    height: 64px;
+    display: inline;
+  }
+}
