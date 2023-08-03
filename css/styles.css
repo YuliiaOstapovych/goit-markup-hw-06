@@ -169,14 +169,16 @@ img {
 
 .hero {
   background: var(--navyblue);
-  padding-top: 188px;
-  padding-bottom: 188px;
+  /* padding-top: 188px;
+  padding-bottom: 188px; */
+  padding-top: 112px;
+  padding-bottom: 112px;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/peopleoffice.jpg);
-  max-width: 1440px;
+    url(../images/peopleoffice-mob.jpg);
+  max-width: 767px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -186,13 +188,14 @@ img {
 .hero-titel {
   color: var(--white);
   text-align: center;
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.07;
-  letter-spacing: 0.02em;
-  max-width: 496px;
+  line-height: 1.11;
+  letter-spacing: 0.018em;
+  max-width: 320px;
   margin: 0 auto;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
+  text-transform: capitalize;
 }
 .hero-btn {
   background-color: var(--iris-color);
@@ -200,7 +203,7 @@ img {
   font-size: 16px;
   font-family: inherit;
   line-height: 1.5;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   cursor: pointer;
   font-weight: 500;
   padding: 16px 32px;
@@ -410,7 +413,7 @@ img {
 .footer {
   background-color: var(--navyblue);
   /* padding: 100px 0; */
-  padding: 97.5px 15px 96px;
+  padding: 96px 0;
 }
 .footer-container {
   display: flex;
@@ -460,6 +463,8 @@ img {
 }
 .footer-socials {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 16px;
   margin-bottom: 72px;
 }
