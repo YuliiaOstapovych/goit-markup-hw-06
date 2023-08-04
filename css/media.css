@@ -17,6 +17,17 @@
     url(../images/peopleoffice-tab.jpg);
     max-width: 1157px;
   }
+  @media (min-device-pixel-ratio: 2), 
+  (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/peopleoffice-tab-2x.jpg);
+    }
+  } 
+
   .hero-titel {
     font-size: 56px;
     line-height: 1.07;
@@ -118,6 +129,16 @@
     url(../images/peopleoffice.jpg);
     max-width: 1440px;
   }
+  @media (min-device-pixel-ratio: 2), 
+  (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/peopleoffice-2x.jpg);
+    }
+  } 
   .hero-titel {
     font-size: 56px;
     line-height: 1.07;
