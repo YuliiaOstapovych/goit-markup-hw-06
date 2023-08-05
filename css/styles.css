@@ -339,7 +339,13 @@ img {
   margin-bottom: 72px;
 }
 .team-container {
-  padding: 32px 8px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 .team-socials {
   display: flex;
@@ -371,7 +377,6 @@ img {
   line-height: 1.2;
   letter-spacing: 0.016em;
   font-weight: 500;
-  margin-bottom: 8px;
 }
 .team-list { 
   display: flex;
@@ -397,7 +402,6 @@ img {
   line-height: 1.5;
   letter-spacing: 0.013em;
   font-weight: 400;
-  margin-bottom: 8px;
 }
 /**---------costomers-------*/
 
